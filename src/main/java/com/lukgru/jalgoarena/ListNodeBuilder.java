@@ -20,16 +20,16 @@ public class ListNodeBuilder {
         }
 
         String[] values = representation.split(",");
-        ListNode head = null;
         ListNode node = null;
 
         for (String value : values) {
-            node = new ListNode(Integer.valueOf(value.trim()), node);
-            if (head == null) {
-                head = node;
+            ListNode tmp = new ListNode(Integer.valueOf(value.trim()));
+            if (node != null) {
+                node.next = tmp;
             }
+            node = tmp;
         }
-        return head;
+        return node;
     }
 
 }

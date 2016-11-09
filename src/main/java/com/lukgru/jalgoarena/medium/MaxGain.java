@@ -8,7 +8,23 @@ package com.lukgru.jalgoarena.medium;
 public class MaxGain {
 
     public int maxGain(int[] arr) {
-        return -1;
+        if (arr == null || arr.length <= 1) return 0;
+        if (arr.length == 2) {
+            int dif = arr[1] - arr[0];
+            return dif < 0 ? 0 : dif;
+        }
+
+        int[] mins = new int[arr.length];
+        int tmpmin = Integer.MAX_VALUE;
+        for (int i=0 ; i<arr.length ; i++) {
+            tmpmin = Math.min(tmpmin, arr[i]);
+            mins[i] = tmpmin;
+        }
+        int maxDif = 0;
+        for (int i=arr.length-1 ; i>=0 ; i--) {
+            maxDif = Math.max(maxDif, arr[i] - mins[i]);
+        }
+        return maxDif;
     }
 
 }

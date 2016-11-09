@@ -15,8 +15,23 @@ import com.lukgru.jalgoarena.TreeNode;
  */
 public class TreeDecompression {
 
+    //FIXME: StackOverflowException is thrown
     public TreeNode decompressTree(String root) {
-        return null;
+        if (root == null || root.isEmpty()) return null;
+        String[] stringNodes = root.split(",");
+        return node(stringNodes, 0);
+    }
+
+    public TreeNode node(String[] nodes, int nodeIndex) {
+        if (nodeIndex >= nodes.length) return null;
+        String nodeValue = nodes[nodeIndex];
+        TreeNode node = null;
+        if (!"*".equals(nodeValue)) {
+            node = new TreeNode(Integer.valueOf(nodeValue));
+            node.left = node(nodes, 2 * nodeIndex);
+            node.right = node(nodes, 2 * nodeIndex + 1);
+        }
+        return node;
     }
 
 }

@@ -10,7 +10,10 @@ package com.lukgru.jalgoarena.medium;
 public class StringToInteger {
 
     public int stoi(String str) {
-        return -1;
+        try {
+            return Integer.valueOf(str);
+        } catch (Exception e) {
+            return 0;
+        }
     }
-
 }
