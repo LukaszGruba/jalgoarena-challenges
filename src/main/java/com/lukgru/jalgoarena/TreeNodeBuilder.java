@@ -16,9 +16,21 @@ public class TreeNodeBuilder {
      * @return
      */
     public TreeNode treeNode(String representation) {
-        TreeNode root = null;
-
-        return root;
+        if (representation == null || representation.isEmpty()) return null;
+        String[] stringNodes = representation.split(",");
+        return node(stringNodes, 0);
     }
 
+    private TreeNode node(String[] nodes, int nodeIndex) {
+        if (nodeIndex >= nodes.length) return null;
+
+        TreeNode node = null;
+        String nodeValue = nodes[nodeIndex];
+        if (!"*".equals(nodeValue)) {
+            node = new TreeNode(Integer.valueOf(nodeValue));
+            node.left = node(nodes, 2 * nodeIndex + 1);
+            node.right = node(nodes, 2 * nodeIndex + 2);
+        }
+        return node;
+    }
 }
