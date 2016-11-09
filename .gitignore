@@ -1,3 +1,6 @@
 .idea/*
 jalgoarena-tasks.iml
 target/*
+.idea/
+src/main/resources/
+target/
