@@ -1,9 +1,5 @@
 package com.lukgru.jalgoarena;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-
 /**
  * Created by Lukasz on 07.11.2016.
  */
@@ -20,6 +16,7 @@ public class ListNodeBuilder {
         }
 
         String[] values = representation.split(",");
+        ListNode head = null;
         ListNode node = null;
 
         for (String value : values) {
@@ -27,9 +24,12 @@ public class ListNodeBuilder {
             if (node != null) {
                 node.next = tmp;
             }
+            else {
+                head = tmp;
+            }
             node = tmp;
         }
-        return node;
+        return head;
     }
 
 }
