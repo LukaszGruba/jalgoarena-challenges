@@ -10,7 +10,22 @@ package com.lukgru.jalgoarena.medium;
 public class StringCompression {
 
     public String compress(String str) {
-        return null;
+        if (str == null || str.isEmpty()) return str;
+        StringBuilder sb = new StringBuilder();
+        char prev = '\0';
+        int counter = 1;
+        for (char c : str.toCharArray()) {
+            if (c == prev) {
+                counter++;
+            }
+            else {
+                sb.append(prev).append(counter);
+                prev = c;
+                counter = 1;
+            }
+        }
+        String compressed = sb.append(prev).append(counter).substring(2);
+        return compressed.length() < str.length() ? compressed : str;
     }
 
 }
