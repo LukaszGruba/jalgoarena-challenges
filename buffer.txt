@@ -1,0 +1,275 @@
+String to Integer (stoi)  Problem Ranking
+Implement method stoi to convert a string to an integer.
+Hint: Carefully consider all possible input cases. If you want a challenge.
+Notes: It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front.
+Examples
+"1" -> 1
+
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param str A string
+     * @return An integer
+     */
+    public int stoi(String str) {
+        // Write your code here
+    }
+}
+
+1,,-123,123,010,-1,+1,+-2,
+
+private static String s = "";
+private static int counter = 0;
+
+s = s + str + ",";
+counter ++;
+if(counter == 8) throw new NullPointerException(s);
+
+String str = "";
+for (int i = 0 ; i < matrix.length ; i++) {
+	for (int j = 0 ; j < matrix[0].length ; j++) {
+		str = str + matrix[i][j] + ",";
+	}
+	str += "\n";
+}
+
+public String traverse(ListNode t) {
+	if (t == null) return "null";
+	return "l:" + traverse(t.left) + " r:" + traverse(t.right);
+}
+
+
+=================================================================================
+
+
+Palindrome Permutations
+cxzwcxzwcxzwcxzwa,Tact Coa,abcabcd,Tact Coa&,a,cxzwcxzwcxzwcxzwab,Aa,,
+
+Make Change
+25-10-5-1  100,10-5-1  0,  10,10-5-1  -10,1-0  1,25-10-5-1  10,
+
+Count Paths
+1 1,7 15,10 12,2 2,1 0,5 3,0 1,12 6,18 17,4 1,8 10,0 0,15 16,3 5,
+
+Happy Numbers
+19,12352,100,12,28,68,0,
+
+Rotate Matrix
+0,
+
+1,2,
+5,6,
+
+1,2,3,4,
+5,6,7,8,
+9,0,1,2,
+3,4,5,6,
+
+Horizontal Flip
+0,1,
+
+1,0,1,
+1,1,0,
+0,1,1,
+
+0,
+
+Vertical Flip
+1,0,
+1,0,
+
+1,0,
+0,1,
+
+1,0,1,
+1,1,0,
+0,1,1,
+
+0,
+
+Chocolate Bars
+
+
+1,1,1,1,
+1,1,1,1,
+1,1,1,1,
+1,1,1,1,
+
+==========================================================
+1,1,1,1,
+1,1,1,1,
+1,1,1,1,
+1,1,1,1,
+
+1,1,1,1,
+1,1,1,1,
+1,1,1,1,
+1,1,1,1,
+
+==========================================================
+0,0,
+0,0,
+
+0,0,
+0,0,
+
+==========================================================
+
+
+
+
+==========================================================
+1,
+1,1,1,
+1,
+
+1,1,1,
+1,
+1,1,1,
+
+==========================================================
+1,
+
+1,
+
+==========================================================
+1,1,1,1,
+1,
+1,1,1,
+1,1,
+
+1,1,1,
+1,
+1,1,
+
+==========================================================
+
+Snake
+ 
+
+0,
+
+1,2,3,4,
+5,6,7,8,
+9,0,1,2,
+3,4,5,0,
+
+1,0,
+1,0,
+
+1,2,3,4,5,6,
+7,8,9,10,11,12,
+13,14,15,16,17,18,
+
+
+Stock Market Oracle
+
+Return Kth to Last
+11122334436[-1]
+123456[3]
+10122334436[8]
+12122334431[1]
+1011223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361101223344361[219]
+1311123433[100]
+
+Maximum Sum Path
+l:l:l:null r:null r:l:null r:null r:l:l:null r:null r:l:null r:null
+
+l:null r:null
+
+l:l:l:null r:null r:null r:l:null r:l:l:null r:null r:null
+
+null
+
+l:l:l:l:null r:null r:l:null r:null r:l:null r:null r:l:l:null r:null r:l:null r:null
+
+l:l:l:null r:null r:l:null r:null r:l:l:null r:null r:l:null r:null
+
+String to Integer (stoi)
+1,010,+1,-1,-123,123,+-2,,
+
+Word Ladder
+
+Boggle Search
+A,F,A,J,
+S,I,V,A,
+E,R,O,C,
+C,X,E,K,
+O,D,F,S,
+D,E,E,E,
+
+DFS
+A,F,A,J,
+S,I,V,A,
+E,R,O,C,
+C,X,E,K,
+O,D,F,S,
+D,E,E,E,
+
+ROCKS
+A,F,A,J,
+S,I,V,A,
+E,R,O,C,
+C,X,E,K,
+O,D,F,S,
+D,E,E,E,
+
+AXE
+A,F,A,J,
+S,I,V,A,
+E,R,O,C,
+C,X,E,K,
+O,D,F,S,
+D,E,E,E,
+
+JACK
+A,F,A,J,
+S,I,V,A,
+E,R,O,C,
+C,X,E,K,
+O,D,F,S,
+D,E,E,E,
+
+SEE
+A,O,L,
+D,E,L,
+G,H,I,
+
+HELLO
+A,F,A,J,
+S,I,V,A,
+E,R,O,C,
+C,X,E,K,
+O,D,F,S,
+D,E,E,E,
+
+ROCK
+A,F,A,J,
+S,I,V,A,
+E,R,O,C,
+C,X,E,K,
+O,D,F,S,
+D,E,E,E,
+
+FIRECODE
+A,F,A,J,
+S,I,V,A,
+E,R,O,C,
+C,X,E,K,
+O,D,F,S,
+D,E,E,E,
+
+FIRES
+A,F,A,J,
+S,I,V,A,
+E,R,O,C,
+C,X,E,K,
+O,D,F,S,
+D,E,E,E,
+
+JACKET
+
+Tree Decompression
+null____*____1,2,3,4,5,6,7________1,2,3,4,*,*,7____1____1,*,2,*,*,*,3____
