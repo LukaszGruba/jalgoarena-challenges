@@ -9,6 +9,8 @@ package com.lukgru.jalgoarena.medium;
 
  A B
  C D
+
+ 1 1,7 15,10 12,2 2,1 0,5 3,0 1,12 6,18 17,4 1,8 10,0 0,15 16,3 5,
  */
 public class CountPaths {
 
