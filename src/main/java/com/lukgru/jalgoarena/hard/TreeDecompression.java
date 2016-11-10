@@ -12,6 +12,10 @@ import com.lukgru.jalgoarena.TreeNode;
  2   3     ==> Compressed String = '1,2,3,4,5,6,7'
  / \ / \
  4  5 6  7
+
+
+ null____*____1,2,3,4,5,6,7________1,2,3,4,*,*,7____1____1,*,2,*,*,*,3____
+
  */
 public class TreeDecompression {
 
