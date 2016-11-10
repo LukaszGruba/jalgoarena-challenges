@@ -5,6 +5,8 @@ package com.lukgru.jalgoarena.medium;
  The palindrome does not need to be limited to just dictionary words (skip non-letter characters). Your solution should be case insensitive.
  Examples
  "Tact Coa" -> true (permutations: "taco cat", "acto tca", etc.)
+
+ cxzwcxzwcxzwcxzwa,Tact Coa,abcabcd,Tact Coa&,a,cxzwcxzwcxzwcxzwab,Aa,,
  */
 public class PalindromePermutations {
 
