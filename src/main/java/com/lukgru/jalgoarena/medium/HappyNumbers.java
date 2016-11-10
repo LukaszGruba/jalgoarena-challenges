@@ -7,6 +7,8 @@ package com.lukgru.jalgoarena.medium;
  * For instance, 19 is a happy number. Sequence: 12 + 92 = 82 8^2 + 2^2 = 68 6^2 + 8^2 = 100 1^2 + 0^2 + 0^2 = 1.
  * Examples
  19 -> true
+
+ 19,12352,100,12,28,68,0,
  */
 public class HappyNumbers {
 
