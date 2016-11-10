@@ -6,9 +6,13 @@ package com.lukgru.jalgoarena.medium;
  Notes: It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front.
  Examples
  "1" -> 1
+
+ 1,010,+1,-1,-123,123,+-2,,
+
  */
 public class StringToInteger {
 
+    //TODO: change implementation
     public int stoi(String str) {
         try {
             return Integer.valueOf(str);
