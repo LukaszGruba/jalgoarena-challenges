@@ -7,17 +7,25 @@ package com.lukgru.jalgoarena.medium;
  Examples
  "1" -> 1
 
- 1,010,+1,-1,-123,123,+-2,,
-
  */
 public class StringToInteger {
 
-    //TODO: change implementation
     public int stoi(String str) {
-        try {
-            return Integer.valueOf(str);
-        } catch (Exception e) {
-            return 0;
+        if (str == null) return 0;
+        int result = 0;
+
+        char[] chars = str.toCharArray();
+        int i= 0;
+        boolean negative = chars[0] == '-';
+        if (negative || chars[0] == '+') {
+            i++;
         }
+        for (; i < chars.length; i++) {
+            int v = (chars[i] - '0');
+            if (v < 0 || v > 9) return 0;
+            result = 10 * result + v;
+        }
+
+        return negative ? -result : result;
     }
 }
