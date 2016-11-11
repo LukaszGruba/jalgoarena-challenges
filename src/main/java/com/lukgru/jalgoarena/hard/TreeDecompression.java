@@ -13,9 +13,6 @@ import com.lukgru.jalgoarena.TreeNode;
  / \ / \
  4  5 6  7
 
-
- null____*____1,2,3,4,5,6,7________1,2,3,4,*,*,7____1____1,*,2,*,*,*,3____
-
  */
 public class TreeDecompression {
 

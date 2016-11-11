@@ -25,6 +25,19 @@ public class TreeDecompressionTest {
     }
 
     @Test
+    public void givenOnlyAsteriskShouldReturnNullTree() {
+        //given
+        String representation = "*";
+
+        //when
+        TreeNode root = treeDecompression.decompressTree(representation);
+
+        //then
+        assertNull(root);
+
+    }
+
+    @Test
     public void givenEmptyRepresentationReturnNullTree() {
         //given
         String representation = "";
@@ -82,14 +95,39 @@ public class TreeDecompressionTest {
     @Test
     public void shouldCreateComplexTree() {
         //given
-        String representation = "1,2,3,4,*,*,5";
+        String representation = "1,2,3,4,*,*,7";
 
         //when
         TreeNode root = treeDecompression.decompressTree(representation);
 
         //then
-        TreeNode expected = new TreeNode(1, new TreeNode(2, new TreeNode(4), null), new TreeNode(3, null, new TreeNode(5)));
+        TreeNode expected = new TreeNode(1, new TreeNode(2, new TreeNode(4), null), new TreeNode(3, null, new TreeNode(7)));
         assertEquals(expected, root);
     }
 
+    @Test
+    public void shouldCreateFullThreeLevelTree() {
+        //given
+        String representation = "1,2,3,4,5,6,7";
+
+        //when
+        TreeNode root = treeDecompression.decompressTree(representation);
+
+        //then
+        TreeNode expected = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3, new TreeNode(6), new TreeNode(7)));
+        assertEquals(expected, root);
+    }
+
+    @Test
+    public void shouldIgnoreChildrenOfNullNode() {
+        //given
+        String representation = "1,*,2,*,*,*,3";
+
+        //when
+        TreeNode root = treeDecompression.decompressTree(representation);
+
+        //then
+        TreeNode expected = new TreeNode(1, null, new TreeNode(2, null, new TreeNode(3)));
+        assertEquals(expected, root);
+    }
 }
