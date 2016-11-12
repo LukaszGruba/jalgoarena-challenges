@@ -78,14 +78,4 @@ public class RotateMatrixTest {
         assertArrayEquals(expected, matrix);
     }
 
-    @Test
-    public void testPerformance() {
-        for (int i = 0; i < 10000000; i++) {
-            givenNullReturnNull();
-            given2x2MatrixShouldRotateProperly();
-            given4x4MatrixShouldRotateProperly();
-            givenOneElementMatrixDoNothing();
-        }
-    }
-
 }
