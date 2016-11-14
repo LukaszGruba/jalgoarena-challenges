@@ -12,10 +12,10 @@ import java.util.List;
 public class PalindromePermutations {
 
     public boolean isPermutationOfPalindrome(String phrase) {
-        if (phrase == null) return false;
+        if (phrase == "") return false;
         if (phrase.length() == 1) return true;
 
-        phrase = phrase.replaceAll(" ", "").toLowerCase();
+        phrase = phrase.toLowerCase().replaceAll("[^a-z]", "");
         int allowedUnique = phrase.length() % 2 == 0 ? 0 : 1;
         List<Character> chars = new LinkedList<>();
         char[] charArray = phrase.toCharArray();
