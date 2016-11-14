@@ -10,6 +10,14 @@ import com.lukgru.jalgoarena.ListNode;
  *
  * Examples
  * 1->2->3->4->5->6->1 -> true
+ 
+ 1,2,3,4,5,3,6,
+1,2,
+1,
+1,2,3,4,5,6,
+1,2,3,4,5,6,6,
+
+1,2,3,4,5,6,1,
  */
 public class IsListCyclic {
 
