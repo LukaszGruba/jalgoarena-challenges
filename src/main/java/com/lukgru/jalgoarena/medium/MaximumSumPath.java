@@ -14,17 +14,17 @@ import com.lukgru.jalgoarena.TreeNode;
  Path: 5 -> 2 -> 1 -> 3 -> 7
  Max Sum = 5+2+1+3+7 = 18
 
- l:l:l:null r:null r:l:null r:null r:l:l:null r:null r:l:null r:null
+null
 
- l:null r:null
+v:1l:v:2l:v:4l:nullr:nullr:v:5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:7l:nullr:null
 
- l:l:l:null r:null r:null r:l:null r:l:l:null r:null r:null
+v:1l:v:2l:v:4l:nullr:nullr:v:-5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:-7l:nullr:null
 
- null
+v:1l:v:2l:v:4l:v:8l:nullr:nullr:v:9l:nullr:nullr:v:5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:7l:nullr:null
 
- l:l:l:l:null r:null r:l:null r:null r:l:null r:null r:l:l:null r:null r:l:null r:null
+v:1l:v:2l:v:4l:nullr:nullr:nullr:v:3l:nullr:v:7l:v:6l:nullr:nullr:null
 
- l:l:l:null r:null r:l:null r:null r:l:l:null r:null r:l:null r:null
+v:1l:nullr:null
 
  */
 public class MaximumSumPath {
