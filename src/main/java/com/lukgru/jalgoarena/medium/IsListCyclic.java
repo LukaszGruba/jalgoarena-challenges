@@ -2,6 +2,8 @@ package com.lukgru.jalgoarena.medium;
 
 import com.lukgru.jalgoarena.ListNode;
 
+import java.util.*;
+
 /**
  * Given a singly linked list, write a method isCyclic to check if the list has cycles.
  * The space complexity can be O(n).
@@ -14,6 +16,18 @@ import com.lukgru.jalgoarena.ListNode;
 public class IsListCyclic {
 
     public boolean isCyclic(ListNode head) {
+        if (head == null || head.next == null) return false;
+
+        ListNode node = head;
+        while (node.next != null) {
+            node = node.next;
+        }
+        int last = node.value;
+        node = head;
+        while (node.next != null) {
+            if (node.value == last) return true;
+            node = node.next;
+        }
         return false;
     }
 
