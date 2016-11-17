@@ -25,7 +25,7 @@ public class IsListCyclicTest {
         boolean cyclic = isListCyclic.isCyclic(head);
 
         //then
-        assertFalse(cyclic);
+        assertTrue(cyclic);
     }
 
     @Test
