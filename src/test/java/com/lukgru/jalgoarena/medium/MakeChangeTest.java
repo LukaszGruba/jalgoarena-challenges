@@ -91,7 +91,19 @@ public class MakeChangeTest {
         int possibilities = makeChange.makeChange(coins, amount);
 
         //then
-        int expected = 220;
+        int expected = 242;
         assertEquals(expected, possibilities);
+    }
+
+    @Test
+    public void performance() {
+        for (int i = 0; i < 1000000; i++) {
+            givenNullCoinsArrayReturnZero();
+            givenZeroAmountReturnZero();
+            givenNegativeAmountReturnZero();
+            givenZeroCoinInCoinsIgnoreIt();
+            givenAmountLessThanBiggerCoinReturnProperly();
+            givenAmountGreaterThanBiggerCoinReturnProperly();
+        }
     }
 }
