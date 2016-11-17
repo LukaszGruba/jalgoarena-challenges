@@ -12,45 +12,35 @@ package com.lukgru.jalgoarena.medium;
  [50,100,20,80,20]
  ->
  110
- 
- 
- [50,100,]
-
-[]
-
-[1,2,3,4,3,2,4,5,1,2,3,4,5,]
-
-[50,100,50,100,50,]
-
-[100,40,20,10,]
-
-[1,1,]
-
-[1,]
-
-[0,100,0,100,0,100,]
-
-[150,100,]
-
-[50,100,20,80,20,]
-
-123
-
-[0,50,10,100,30,]
  */
 public class StockMarketOracle {
 
     public int maxProfit(int[] prices) {
-        int profit = 0;
-        int atBuy = prices[0];
-        int atSell = 0;
-        boolean ableToBuy = true;
-//        for (int i=0 ; i< prices.length ; i++) {
-//            int price = prices[i];
-//            if ()
-//            if (atBuy )
-//        }
+        if (prices == null || prices.length <= 1) return 0;
 
+        int profit = 0;
+        boolean ableToBuy = true;
+        int atBuy = 0;
+        for (int i=0 ; i< prices.length - 1 ; i++) {
+            int price = prices[i];
+            int nextPrice = prices[i+1];
+            if (ableToBuy) {
+                if (price < nextPrice) {
+                    atBuy = price;
+                    ableToBuy = false;
+                }
+            }
+            else {
+                if (price > nextPrice) {
+                    profit = profit + price - atBuy;
+                    ableToBuy = true;
+                }
+            }
+        }
+        int lastProfit = prices[prices.length - 1] - atBuy;
+        if (!ableToBuy && lastProfit > 0) {
+            profit = profit + lastProfit;
+        }
         return profit;
     }
 
