@@ -17,16 +17,14 @@ public class IsListCyclic {
 
     public boolean isCyclic(ListNode head) {
         if (head == null || head.next == null) return false;
-
-        ListNode node = head;
-        while (node.next != null) {
-            node = node.next;
-        }
-        int last = node.value;
-        node = head;
-        while (node.next != null) {
-            if (node.value == last) return true;
-            node = node.next;
+        ListNode node;
+        while (head.next != null) {
+            node = head.next;
+            while (node != null) {
+                if (head.value == node.value) return true;
+                node = node.next;
+            }
+            head = head.next;
         }
         return false;
     }
