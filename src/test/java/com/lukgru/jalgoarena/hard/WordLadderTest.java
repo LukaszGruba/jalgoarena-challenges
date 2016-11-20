@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.HashSet;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by grubal on 2016-11-16.
@@ -14,7 +14,140 @@ public class WordLadderTest {
     private WordLadder wordLadder = new WordLadder();
 
     @Test
-    public void test1() {
+    public void givenNullDictionaryAndWordsReturnZero() {
+        //given
+        String begin = null;
+        String end = null;
+        HashSet dictionary = null;
+
+        //when
+        int length = wordLadder.ladderLength(begin, end, dictionary);
+
+        //then
+        int expected = 0;
+        assertEquals(expected, length);
+    }
+
+    @Test
+    public void caseWith1LetterWords() {
+        //given
+        String begin = "a";
+        String end = "c";
+        String[] words = {"a","b","c"};
+        HashSet dictionary = new HashSet();
+        for (String word : words) {
+            dictionary.add(word);
+        }
+
+        //when
+        int length = wordLadder.ladderLength(begin, end, dictionary);
+
+        //then
+        int expected = 2; //a > c
+        assertEquals(expected, length);
+    }
+
+    @Test
+    public void caseWith3LetterWords() {
+        //given
+        String begin = "hot";
+        String end = "dog";
+        String[] words = {"hog","pot","tot","hop","dot","cog","hot","dog"};
+        HashSet dictionary = new HashSet();
+        for (String word : words) {
+            dictionary.add(word);
+        }
+
+        //when
+        int length = wordLadder.ladderLength(begin, end, dictionary);
+
+        //then
+        int expected = 3; //hot > hog > dog
+        assertEquals(expected, length);
+    }
+
+    @Test
+    public void caseWith4LetterWords() {
+        //given
+        String begin = "game";
+        String end = "thee";
+        String[] words = {"heat","thee","game","frye","tree","faye","free","fame","hell"};
+        HashSet dictionary = new HashSet();
+        for (String word : words) {
+            dictionary.add(word);
+        }
+
+        //when
+        int length = wordLadder.ladderLength(begin, end, dictionary);
+
+        //then
+        int expected = 7; //game > fame > faye > frye > free > tree > thee
+        assertEquals(expected, length);
+    }
+
+    @Test
+    public void caseWith4LetterWords2() {
+        //given
+        String begin = "kiss";
+        String end = "tusk";
+        String[] words = {"disk","sang","musk","ties","dusk","diss","muss","kiss","miss","tusk"};
+        HashSet dictionary = new HashSet();
+        for (String word : words) {
+            dictionary.add(word);
+        }
+
+        //when
+        int length = wordLadder.ladderLength(begin, end, dictionary);
+
+        //then
+        int expected = 5; //kiss > miss > muss > musk > tusk
+        assertEquals(expected, length);
+    }
+
+    @Test
+    public void caseWith5LetterWords() {
+        //given
+        String begin = "teach";
+        String end = "place";
+        String[] words = {"rheum","wilts","fetch","peace","teach","peach","poach","berra","place","purer","pooch","peale"};
+        HashSet dictionary = new HashSet();
+        for (String word : words) {
+            dictionary.add(word);
+        }
+
+        //when
+        int length = wordLadder.ladderLength(begin, end, dictionary);
+
+        //then
+        int expected = 4; //teach > peach > peace > place
+        assertEquals(expected, length);
+    }
+
+    @Test
+    public void caseWithManySameLengthPaths() {
+        //given
+        String begin = "ta";
+        String end = "if";
+        String[] words = {"cf","io","jr","is","ta","sc","ph","ha","to","if","ca","hf","ts"};
+        HashSet dictionary = new HashSet();
+        for (String word : words) {
+            dictionary.add(word);
+        }
+
+        //when
+        int length = wordLadder.ladderLength(begin, end, dictionary);
+
+        //then
+        int expected = 4;
+        // ta > ha > hf > if
+        // ta > ca > cf > if
+        // ta > to > io > if
+        // ta > ts > is > if
+        assertEquals(expected, length);
+    }
+
+    @Test
+    public void givenBigDictionary() {
         //given
         String begin = "qa";
         String end = "sq";
@@ -32,141 +165,12 @@ public class WordLadderTest {
         int length = wordLadder.ladderLength(begin, end, dictionary);
 
         //then
-        int expected = -1;
+        int expected = 5; //qa > ya > yb > sb > sq
         assertEquals(expected, length);
     }
 
     @Test
-    public void test2() {
-        //given
-        String begin = null;
-        String end = null;
-        HashSet dictionary = null;
-
-        //when
-        int length = wordLadder.ladderLength(begin, end, dictionary);
-
-        //then
-        int expected = -1;
-        assertEquals(expected, length);
-    }
-
-    @Test
-    public void test3() {
-        //given
-        String begin = "teach";
-        String end = "place";
-        String[] words = {"rheum","wilts","fetch","peace","teach","peach","poach","berra","place","purer","pooch","peale"};
-        HashSet dictionary = new HashSet();
-        for (String word : words) {
-            dictionary.add(word);
-        }
-
-        //when
-        int length = wordLadder.ladderLength(begin, end, dictionary);
-
-        //then
-        int expected = -1;
-        assertEquals(expected, length);
-    }
-
-    @Test
-    public void test4() {
-        //given
-        String begin = "hot";
-        String end = "dog";
-        String[] words = {"hog","pot","tot","hop","dot","cog","hot","dog"};
-        HashSet dictionary = new HashSet();
-        for (String word : words) {
-            dictionary.add(word);
-        }
-
-        //when
-        int length = wordLadder.ladderLength(begin, end, dictionary);
-
-        //then
-        int expected = -1;
-        assertEquals(expected, length);
-    }
-
-    @Test
-    public void test5() {
-        //given
-        String begin = "a";
-        String end = "c";
-        String[] words = {"a","b","c"};
-        HashSet dictionary = new HashSet();
-        for (String word : words) {
-            dictionary.add(word);
-        }
-
-        //when
-        int length = wordLadder.ladderLength(begin, end, dictionary);
-
-        //then
-        int expected = -1;
-        assertEquals(expected, length);
-    }
-
-    @Test
-    public void test6() {
-        //given
-        String begin = "ta";
-        String end = "if";
-        String[] words = {"cf","io","jr","is","ta","sc","ph","ha","to","if","ca","hf","ts"};
-        HashSet dictionary = new HashSet();
-        for (String word : words) {
-            dictionary.add(word);
-        }
-
-        //when
-        int length = wordLadder.ladderLength(begin, end, dictionary);
-
-        //then
-        int expected = -1;
-        assertEquals(expected, length);
-    }
-
-    @Test
-    public void test7() {
-        //given
-        String begin = "game";
-        String end = "thee";
-        String[] words = {"heat","thee","game","frye","tree","faye","free","fame","hell"};
-        HashSet dictionary = new HashSet();
-        for (String word : words) {
-            dictionary.add(word);
-        }
-
-        //when
-        int length = wordLadder.ladderLength(begin, end, dictionary);
-
-        //then
-        int expected = -1;
-        assertEquals(expected, length);
-    }
-
-    @Test
-    public void test8() {
-        //given
-        String begin = "kiss";
-        String end = "tusk";
-        String[] words = {"disk","sang","musk","ties","dusk","diss","muss","kiss","miss","tusk"};
-        HashSet dictionary = new HashSet();
-        for (String word : words) {
-            dictionary.add(word);
-        }
-
-        //when
-        int length = wordLadder.ladderLength(begin, end, dictionary);
-
-        //then
-        int expected = -1;
-        assertEquals(expected, length);
-    }
-
-    @Test
-    public void test9() {
+    public void givenHugeDictionary() {
         //given
         String begin = "cet";
         String end = "ism";
@@ -215,8 +219,23 @@ public class WordLadderTest {
         int length = wordLadder.ladderLength(begin, end, dictionary);
 
         //then
-        int expected = -1;
+        int expected = 16;
         assertEquals(expected, length);
+    }
+
+//    @Test
+    public void performance() {
+        for (int i = 0; i < 100; i++) {
+            givenNullDictionaryAndWordsReturnZero();
+            caseWith1LetterWords();
+            caseWith3LetterWords();
+            caseWith4LetterWords();
+            caseWith4LetterWords2();
+            caseWith5LetterWords();
+            caseWithManySameLengthPaths();
+            givenBigDictionary();
+            givenHugeDictionary();
+        }
     }
 
 }
