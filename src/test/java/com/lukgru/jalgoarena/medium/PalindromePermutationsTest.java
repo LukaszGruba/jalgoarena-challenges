@@ -12,9 +12,9 @@ public class PalindromePermutationsTest {
     private PalindromePermutations palindromePermutations = new PalindromePermutations();
 
     @Test
-    public void givenNullReturnFalse() {
+    public void givenEmptyStringReturnFalse() {
         //given
-        String input = null;
+        String input = "";
 
         //when
         boolean result = palindromePermutations.isPermutationOfPalindrome(input);
@@ -72,7 +72,7 @@ public class PalindromePermutationsTest {
     }
 
     @Test
-    public void shouldWorkForNonLetterCharacters() {
+    public void shouldIgnoreNonLetterCharacters() {
         //given
         String input = "Tact Coa&";
 
@@ -80,7 +80,7 @@ public class PalindromePermutationsTest {
         boolean result = palindromePermutations.isPermutationOfPalindrome(input);
 
         //then
-        assertFalse(result);
+        assertTrue(result);
     }
 
     @Test
