@@ -39,6 +39,7 @@ public class WordLadder {
         return minPath != Integer.MAX_VALUE ? minPath + 1 : minPath;
     }
 
+//TODO: Maybe instead of calculating each time, keep similar words in some public data structure
     private List<String> getWordsWithOneLetterDifferent(String word, HashSet<String> dict2) {
         List<String> words = new ArrayList<String>();
         for (String s : dict2) {
@@ -51,6 +52,7 @@ public class WordLadder {
 
     private boolean differsByOneLetter(String word1, String word2) {
         int differentLetters = 0;
+//TODO: Check if method in condition is evaluated each time
         for (int i=0 ; i<word1.length() ; i++) {
             if (word1.charAt(i) != word2.charAt(i)) {
                 differentLetters++;
