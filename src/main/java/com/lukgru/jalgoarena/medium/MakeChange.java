@@ -14,9 +14,6 @@ public class MakeChange {
         for (int i = 0; i <= coins.length; i++) {
             solution[i][0] = 1;
         }
-        for (int i = 1; i <= amount; i++) {
-            solution[0][i] = 0;
-        }
         for (int i = 1; i <= coins.length; i++) {
             for (int j = 1; j <= amount; j++) {
                 if (coins[i - 1] <= j) {
