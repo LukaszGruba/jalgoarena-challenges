@@ -81,7 +81,7 @@ public class MaximumSumPathTest {
     @Test
     public void givenTreeWithOnlyOnePathReturnSumOfItsNodeValues() {
         //given
-        TreeNode root = new TreeNodeBuilder().treeNode("1,2,3,4,*,*,7,*,*,*,*,6");
+        TreeNode root = new TreeNodeBuilder().treeNode("1,2,3,4,*,*,7,*,*,*,*,*,*,6");
 
         //when
         int maxSumPath = maximumSumPath.maxSumPath(root);
