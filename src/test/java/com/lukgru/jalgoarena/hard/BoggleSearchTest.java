@@ -209,4 +209,20 @@ public class BoggleSearchTest {
         assertTrue(found);
     }
 
+    @Test
+    public void performance() {
+        for (int i = 0; i < 1000000; i++) {
+            test1();
+            test2();
+            test3();
+            test4();
+            test5();
+            test6();
+            test7();
+            test8();
+            test9();
+            test10();
+        }
+    }
+
 }
