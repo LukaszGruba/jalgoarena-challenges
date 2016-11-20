@@ -13,24 +13,25 @@ import com.lukgru.jalgoarena.TreeNode;
 
  Path: 5 -> 2 -> 1 -> 3 -> 7
  Max Sum = 5+2+1+3+7 = 18
-
-null
-
-v:1l:v:2l:v:4l:nullr:nullr:v:5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:7l:nullr:null
-
-v:1l:v:2l:v:4l:nullr:nullr:v:-5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:-7l:nullr:null
-
-v:1l:v:2l:v:4l:v:8l:nullr:nullr:v:9l:nullr:nullr:v:5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:7l:nullr:null
-
-v:1l:v:2l:v:4l:nullr:nullr:nullr:v:3l:nullr:v:7l:v:6l:nullr:nullr:null
-
-v:1l:nullr:null
-
  */
 public class MaximumSumPath {
 
+    private int maxPath;
+
     public int maxSumPath(TreeNode root) {
-        return -1;
+        if (root == null) return 0;
+        if (root.left == null && root.right == null) return root.data;
+
+        maxPath = Integer.MIN_VALUE;
+        return Math.max(traverse(root), maxPath);
+    }
+
+    private int traverse(TreeNode node) {
+        if (node.left == null && node.right == null) return node.data;
+        int left = node.left != null ? traverse(node.left) : 0;
+        int right = node.right != null ? traverse(node.right) : 0;
+        maxPath = Math.max(maxPath, left + right + node.data);
+        return Math.max(left, right) + node.data;
     }
 
 }
