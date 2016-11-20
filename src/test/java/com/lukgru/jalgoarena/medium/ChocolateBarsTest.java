@@ -147,17 +147,4 @@ public class ChocolateBarsTest {
         assertEquals(expected, cuts);
     }
 
-    @Test
-    public void performance() {
-        for (int i = 0; i < 10000000; i++) {
-            givenTwoNullBarsReturnZero();
-            givenTwoSingleElementsReturnZero();
-            shouldWorkForOnlyOneBar();
-            given2Identical2x2Bars();
-            given2Identical4x4Bars();
-            givenComplexPieces();
-            givenComplexPieces2();
-        }
-    }
-
 }

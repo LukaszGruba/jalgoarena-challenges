@@ -31,7 +31,7 @@ public class ReturnKthToLastTest {
     }
 
     @Test
-    public void returnEighthtoLast() {
+    public void returnEighthToLast() {
         //given
         String listRepresentation = "10,1,2,2,3,3,4,4,3,6";
         int k = 8;
@@ -103,18 +103,6 @@ public class ReturnKthToLastTest {
         //then
         int expected = 3;
         assertEquals(expected, element);
-    }
-
-    @Test
-    public void performance() {
-        for (int i = 0; i < 100000; i++) {
-            returnFirstToLast();
-            returnEighthtoLast();
-            givenTooBigIndexReturnZero();
-            returnFirstElement();
-            givenNegativeIndexReturnZero();
-            returnThirdToLast();
-        }
     }
 
 }
