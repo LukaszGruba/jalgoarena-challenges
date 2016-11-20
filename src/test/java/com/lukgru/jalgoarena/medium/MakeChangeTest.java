@@ -95,15 +95,4 @@ public class MakeChangeTest {
         assertEquals(expected, possibilities);
     }
 
-    @Test
-    public void performance() {
-        for (int i = 0; i < 1000000; i++) {
-            givenNullCoinsArrayReturnZero();
-            givenZeroAmountReturnZero();
-            givenNegativeAmountReturnZero();
-            givenZeroCoinInCoinsIgnoreIt();
-            givenAmountLessThanBiggerCoinReturnProperly();
-            givenAmountGreaterThanBiggerCoinReturnProperly();
-        }
-    }
 }
