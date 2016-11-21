@@ -219,7 +219,7 @@ public class WordLadderTest {
         int length = wordLadder.ladderLength(begin, end, dictionary);
 
         //then
-        int expected = 16;
+        int expected = 11;
         assertEquals(expected, length);
     }
 
