@@ -223,9 +223,9 @@ public class WordLadderTest {
         assertEquals(expected, length);
     }
 
-//    @Test
+    @Test
     public void performance() {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             givenNullDictionaryAndWordsReturnZero();
             caseWith1LetterWords();
             caseWith3LetterWords();
