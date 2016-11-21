@@ -14,7 +14,7 @@ public class ChocolateBarsTest {
     @Test
     public void givenTwoNullBarsReturnZero() {
         //given
-        int[][] bar1 = null;
+        int[][] bar1 = {{},{},{}};
         int[][] bar2 = null;
 
         //when
@@ -42,7 +42,7 @@ public class ChocolateBarsTest {
     @Test
     public void shouldWorkForOnlyOneBar() {
         //given
-        int[][] bar1 = null;
+        int[][] bar1 = {{},{},{},{},{}};
         int[][] bar2 = {
                 {1,1,1,1},
                 {1,1,1,1},
