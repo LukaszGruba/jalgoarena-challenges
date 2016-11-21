@@ -23,13 +23,11 @@ public class ChocolateBars {
     }
 
     private int countCuts(int[][] bar) {
-        if (bar == null) return 0;
-
         int width = bar[0].length;
         for (int i = 1; i < bar.length; i++) {
             width = Math.max(width, bar[i].length);
         }
-        return bar.length + width - 2;
+        return width > 0 ? bar.length + width - 2 : 0;
     }
 
 }
