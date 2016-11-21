@@ -223,19 +223,4 @@ public class WordLadderTest {
         assertEquals(expected, length);
     }
 
-    @Test
-    public void performance() {
-        for (int i = 0; i < 10; i++) {
-            givenNullDictionaryAndWordsReturnZero();
-            caseWith1LetterWords();
-            caseWith3LetterWords();
-            caseWith4LetterWords();
-            caseWith4LetterWords2();
-            caseWith5LetterWords();
-            caseWithManySameLengthPaths();
-            givenBigDictionary();
-            givenHugeDictionary();
-        }
-    }
-
 }
