@@ -15,7 +15,7 @@ public class ChocolateBarsTest {
     public void givenTwoNullBarsReturnZero() {
         //given
         int[][] bar1 = {{},{},{}};
-        int[][] bar2 = null;
+        int[][] bar2 = {{},{}};
 
         //when
         int cuts = chocolateBars.countChocolateCuts(bar1, bar2);
