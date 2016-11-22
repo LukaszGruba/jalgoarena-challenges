@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 /**
  * Created by Lukasz on 09.11.2016.
  */
-public class ListNodeBuilderTest {
+public class ListPathNodeBuilderTest {
 
     private ListNodeBuilder listNodeBuilder = new ListNodeBuilder();
 
