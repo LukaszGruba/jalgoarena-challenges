@@ -14,11 +14,11 @@ public class WordLadderTest {
     private WordLadder wordLadder = new WordLadder();
 
     @Test
-    public void givenNullDictionaryAndWordsReturnZero() {
+    public void givenEmptyDictionaryAndWordsReturnZero() {
         //given
-        String begin = null;
-        String end = null;
-        HashSet dictionary = null;
+        String begin = "";
+        String end = "";
+        HashSet dictionary = new HashSet();
 
         //when
         int length = wordLadder.ladderLength(begin, end, dictionary);
@@ -222,5 +222,4 @@ public class WordLadderTest {
         int expected = 11;
         assertEquals(expected, length);
     }
-
 }

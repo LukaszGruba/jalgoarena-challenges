@@ -25,16 +25,26 @@ public class WordLadder {
     }
 
     public int ladderLength(String begin, String end, HashSet dict) {
-        LinkedList<PathNode> path = new LinkedList<>();
+        int wordLength = begin.length();
+        if (wordLength == 0 || dict.isEmpty()) return 0;
+        if (wordLength == 1) return 2;
+
+        Queue<PathNode> path = new ArrayDeque<>(256);
         path.add(new PathNode(begin, 1));
 
+        PathNode node;
         while (!path.isEmpty()) {
-            PathNode node = path.remove();
+            node = path.remove();
             if (end.equals(node.word)) return node.path;
-            char[] letters = node.word.toCharArray();
-            for (int i = 0; i < ; i++) {
+            for (int i = 0; i < wordLength; i++) {
+                char[] letters = node.word.toCharArray();
                 for (char c = 'a' ; c <= 'z' ; c++) {
-
+                    letters[i] = c;
+                    String newWord = new String(letters);
+                    if (dict.contains(newWord)) {
+                        path.add(new PathNode(newWord, node.path + 1));
+                        dict.remove(newWord);
+                    }
                 }
             }
         }
