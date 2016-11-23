@@ -11,7 +11,7 @@ import com.lukgru.jalgoarena.ListNode;
 public class DeleteListHeadNode {
 
     public ListNode deleteAtHead(ListNode head) {
-        return null;
+        return head != null ? head.next : null;
     }
 
 }
