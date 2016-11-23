@@ -2,6 +2,9 @@ package com.lukgru.jalgoarena.easy;
 
 import com.lukgru.jalgoarena.TreeNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  Given a binary tree, Write a method preorderTraversal to traverse the tree in the preorder manner. Return array of elements visited in preorder format.
  Example
@@ -10,21 +13,25 @@ import com.lukgru.jalgoarena.TreeNode;
  2   3     ==> 1245367
  / \ / \
  4  5 6  7
-
- v:1l:v:2l:v:4l:nullr:nullr:v:5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:7l:nullr:null
- null
- v:1l:v:2l:v:4l:nullr:nullr:nullr:v:3l:nullr:v:7l:nullr:null
- v:1l:nullr:null
  */
 public class PreorderTraversal {
 
-    public class Solution {
-        /**
-         * @param root Root of binary tree
-         * @return  Preordered array of binary tree elements
-         */
-        public int[] preorderTraversal(TreeNode root) {
-            return null;
+    public int[] preorderTraversal(TreeNode root) {
+        if (root == null) return null;
+        if (root.right == null && root.left == null) return new int[]{root.data};
+        List<Integer> list = new ArrayList<>(7);
+        traverse(root, list);
+        int[] result = new int[list.size()];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = list.get(i);
         }
+        return result;
+    }
+
+    private void traverse(TreeNode node, List<Integer> list) {
+        if (node == null) return;
+        list.add(node.data);
+        traverse(node.left, list);
+        traverse(node.right, list);
     }
 }
