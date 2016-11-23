@@ -1,0 +1,548 @@
+EASY
+Preorder Traversal  Problem Ranking
+Given a binary tree, Write a method preorderTraversal to traverse the tree in the preorder manner. Return array of elements visited in preorder format.
+Example
+    1
+   / \
+  2   3     ==> 1245367
+ / \ / \
+4  5 6  7 
+
+v:1l:v:2l:v:4l:nullr:nullr:v:5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:7l:nullr:null
+null
+v:1l:v:2l:v:4l:nullr:nullr:nullr:v:3l:nullr:v:7l:nullr:null
+v:1l:nullr:null
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return  Preordered array of binary tree elements
+     */
+    public int[] preorderTraversal(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Single Number  Problem Ranking
+Write a method singleNumber that returns a number that appears only once in an array. Assume that array will surely have a unique value. The array will never be empty..
+Examples
+[1,2,3,4,1,2,3,4,5]
+->
+5
+
+[1,2,3,4,3,-2,4,5,1,2,3,4,5,]
+[0,1,2,3,4,5,1,2,3,4,5,]
+[1,]
+[1,2,3,4,1,2,3,4,5,]
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param arr Array of integers with a single number
+     * @return Single Number to find
+     */
+    public int singleNumber(int[] arr) {
+        if(arr.length == 1) return arr[0];
+        Arrays.sort(arr);
+        for (int i=0 ; i<arr.length-1 ; i=i+2)  {
+            if (arr[i] != arr[i+1]) return arr[i];
+        }
+        return arr[arr.length - 1];
+    }
+}
+
+Postorder Traversal  Problem Ranking
+Given a binary tree, Write a method postorderTraversal to traverse the tree in the postorder manner. Return array of elements visited in postorder format.
+Example
+    1
+   / \
+  2   3     ==> 4526731
+ / \ / \
+4  5 6  7 
+
+v:1l:nullr:null
+null
+v:1l:v:2l:v:4l:nullr:nullr:v:5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:7l:nullr:null
+v:1l:v:2l:v:4l:nullr:nullr:nullr:v:3l:nullr:v:7l:nullr:null
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return  Postordered array of binary tree elements
+     */
+    public int[] postorderTraversal(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Inorder Traversal  Problem Ranking
+Given a binary tree, Write a method inorderTraversal to traverse the tree in the inorder manner. Return array of elements visited in inorder format.
+Example
+    1
+   / \
+  2   3     ==> 4251637
+ / \ / \
+4  5 6  7 
+
+null
+v:1l:nullr:null
+v:1l:v:2l:v:4l:nullr:nullr:v:5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:7l:nullr:null
+v:1l:v:2l:v:4l:nullr:nullr:nullr:v:3l:nullr:v:7l:nullr:null
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return  Inordered array of binary tree elements
+     */
+    public int[] inorderTraversal(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Insert Node at Tail  Problem Ranking
+Write a method insertAtTail to insert a node at the end of a singly linked list. Return the head of the modified list.
+Examples
+1->2->3->4->5->6, 7 -> 1->2->3->4->5->6->7
+
+1,2,3,4,5,6, : 7
+ : 2
+1, : 1
+5,3, : 5
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param head Linked List head
+     * @param data New value
+     * @return  New linked list
+     */
+    public ListNode insertAtTail(ListNode head, int data) {
+        // Write your code here
+    }
+}
+
+Sum of a binary tree  Problem Ranking
+Given a binary tree, write a method sum to find and return the sum of all elements. For an empty tree return 0.
+Example
+    1
+   / \
+  2   3     ==> sum = 28
+ / \ / \
+4  5 6  7 
+
+v:1l:v:2l:v:4l:nullr:nullr:v:-5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:-7l:nullr:null
+null
+v:1l:nullr:null
+v:1l:v:2l:v:4l:nullr:nullr:v:5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:7l:nullr:null
+v:1l:v:2l:v:4l:nullr:nullr:nullr:v:3l:nullr:v:7l:v:6l:nullr:nullr:null
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return  Sum of all binary tree elements
+     */
+    public int sum(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Delete List Head Node  Problem Ranking
+Given a singly linked list, write a method deleteAtHead to delete its head node and return the new head.
+Examples
+1->2->3->4->5->6 -> 2->3->4->5->6
+
+1,
+1,2,3,4,5,6,
+
+5,3,
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param head Linked List head
+     * @return  Initial linked list with removed head
+     */
+    public ListNode deleteAtHead(ListNode head) {
+        // Write your code here
+    }
+}
+
+First Non Repeated Character  Problem Ranking
+Write a method findFirstNonRepeatedChar that finds the first non-duplicate character in a string. Return null if no unique character is found.
+Example
+'asdsdakz -> 'k'
+
+asdsdakz
+null
+asdsda
+
+asd
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param str Input string
+     * @return  First non-duplicate character or null if absent
+     */
+    public String findFirstNonRepeatedChar(String str) {
+        // Write your code here
+    }
+}
+
+Remove Duplicates  Problem Ranking
+Write method removeDuplicates to remove duplicates from an unsorted linked list.
+Examples
+1->2->3->4->3->3 -> 1->2->3->4
+
+1,1,1,1,
+1,2,3,4,3,3,
+1,1,1,1,2,3,4,3,3,
+1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,
+1,1,2,2,3,3,4,4,3,3,
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param node Linked List where we need to remove duplicates
+     * @return  Linked List with removed duplicates
+     */
+    public ListNode removeDuplicates(ListNode node) {
+        // Write your code here
+    }
+}
+
+Sort Array  Problem Ranking
+Write method sort to sorg given array.
+Note: You cannot use Arrays.sort or any other framework method to do that - you have to implement it.
+Example
+[44,2,22,7,11,15] -> [2,7,11,15,22,44]
+
+[44,2,22,7,11,15,]
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,9,9,9,10,11,1001,2001,198,201,203,201,999,345,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,4,5,6,1,1,1,1,1,1,1,1,1,1,1,101,1,1,1,1,1,1,1,1,]
+[1,]
+null
+[]
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param arr An array to sort
+     * @return  Sorted array
+     */
+    public int[] sort(int[] arr) {
+        // Write your code here
+    }
+}
+
+Insert Stars  Problem Ranking
+Given a string, write a method insertPairStar to compute a new string where the identical adjacent characters in the original string are separated by a "*".
+Example
+'sas -> 'sas'
+'kk -> 'k*k'
+
+asdsdakz
+null
+kk
+
+kkcckkcc
+aaaaa
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param str Input string
+     * @return  Computed string
+     */
+    public String insertPairStar(String str) {
+        // Write your code here
+    }
+}
+
+Transpose Matrix  Problem Ranking
+You are given a square 2D image matrix where each integer represents a pixel. Write a method transposeMatrix to transform the matrix into its transpose - in-place. The transpose of a matrix is a matrix which is formed by turning all the rows of the source matrix into columns and vice-versa..
+Examples
+[[1, 2, 3, 4],
+ [5, 6, 7, 8],
+ [9, 0, 1, 2],
+ [3, 4, 5, 0]]
+->
+[[1, 5, 9, 3],
+ [2, 6, 0, 4],
+ [3, 7, 1, 5],
+ [4, 8, 2, 0]]
+ import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param matrix Matrix to transpose
+     * @return  Operation in place
+     */
+    public void transposeMatrix(int[][] matrix) {
+        // Write your code here
+    }
+}
+
+Count the Leaves  Problem Ranking
+Write a method countLeaves to find the total number of leaf nodes in a binary tree. If there is no leaf nodes, return 0..
+Example
+    1
+   / \
+  2   3     ==> # count = 4
+ / \ / \
+4  5 6  7 
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return  Number of leaf nodes
+     */
+    public int countLeaves(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Palindrome List  Problem Ranking
+Implement method isPalindrome with algorithm to check if a linked list is a palindrome.
+Examples
+0->1->2->1->0 -> true
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param head Linked List to check if it's palindrome
+     * @return  Indicates if input linked list is palindrome
+     */
+    public boolean isPalindrome(ListNode head) {
+        // Write your code here
+    }
+}
+
+Check Permutations  Problem Ranking
+Given two strings, write a method permutation to decide if one is a permutation of other.
+Examples
+"abc", "cba" -> true
+"abc", "cb" -> false
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param str1 first string to be checked for permutation match
+     * @param str2 second string to be checked for permutation match
+     * @return  Indicate if one string is a permutation of another
+     */
+    public boolean permutation(String str1, String str2) {
+        // Write your code here
+    }
+}
+
+Is String Unique  Problem Ranking
+Implement method isUniqueChars with an algorithm to determine if a ASCII string has all unique characters.
+What if you cannot use additional data structures?
+Examples
+"AdSda" -> false
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param str input string to be checked (ASCII)
+     * @return  Indicate if string contains only unique chars
+     */
+    public boolean isUniqueChars(String str) {
+        // Write your code here
+    }
+}
+
+Binary Search  Problem Ranking
+Write a method binarySearch that searches an array of integers for a given integer using the Binary Search Algorithm. If the input integer is found in the array - return index of that item. Otherwise, return -1.
+Note: You may assume that the given array of integers is already sorted in ascending order.
+Example
+[2,5,7,11,15], 11 -> 3
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param arr An array of Integers
+     * @param n element to find
+     * @return  Index of element if found or -1 if absent
+     */
+    public int binarySearch(int[] arr, int n) {
+        // Write your code here
+    }
+}
+
+Delete Node at Middle  Problem Ranking
+Given a singly linked list, write a method deleteAtMiddle to delete the node at a given position (starting from 1 as the head position) and return the head of the list. Do nothing if the input position is out of range.
+Examples
+1->2->3->4->5->6, 3 -> 1->2->4->5->6
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param head Linked List head
+     * @param position Position of node to be removed
+     * @return  New Linked List with removed node at given position
+     */
+    public ListNode deleteAtMiddle(ListNode head, int position) {
+        // Write your code here
+    }
+}
+
+Height of a binary tree  Problem Ranking
+Given a binary tree, Write a method findHeight to find its height. An empty tree has a height of 0.
+Example
+    1
+   / \
+  2   3     ==> height = 3
+ / \ / \
+4  5 6  7 
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return  Height of binary tree
+     */
+    public int findHeight(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Binary Representation  Problem Ranking
+Write a method computeBinary to compute the binary representation of an integer. The method should return a string with 1s and 0s. Use the minimum number of binary digits needed for representation (truncate unnecessary trailing 0s).
+Note: using java framework to solve it is forbidden - you have to code it by yourself.
+Example
+6 -> '110'
+5 -> '101'
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param val Input number
+     * @return  Binary representation
+     */
+    public String computeBinary(int val) {
+        // Write your code here
+    }
+}
+
+Find Middle Node  Problem Ranking
+Given a singly linked list, write a method findMiddleNode to find and return the middle node of the list.
+Examples
+1->2->3->4->5 -> 3->4->5
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param head Linked List head
+     * @return  Middle node
+     */
+    public ListNode findMiddleNode(ListNode head) {
+        // Write your code here
+    }
+}
+
+Delete List Tail Node  Problem Ranking
+Given a singly linked list, write a method deleteAtTail to delete its last node and return the head.
+Examples
+1->2->3->4->5->6 -> 1->2->3->4->5
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param head Linked List head
+     * @return  Initial linked list with removed tail
+     */
+    public ListNode deleteAtTail(ListNode head) {
+        // Write your code here
+    }
+}
+
+Find Max Element  Problem Ranking
+Given a binary tree, write a method findMax to return maximum element. Return 0 for empty tree.
+Example
+     20 
+   /   \ 
+ 15    30 
+/  \ 
+14  18   
+ 
+output ==> 30
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return  Max element of a binary tree
+     */
+    public int findMax(TreeNode root) {
+        // Write your code here
+    }
+}
+
+String Rotation  Problem Ranking
+Given two strings, s1 and s2, write method isRotation with algorithm checking if s2 is a rotation of s1.
+Example
+'watterbottle', 'erbottlewatt' -> true
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param s1 s1 string
+     * @param s2 s2 string
+     * @return  Is s2 rotation of s1
+     */
+    public boolean isRotation(String s1, String s2) {
+        // Write your code here
+    }
+}
+
+Fibonacci  Problem Ranking
+Write the fib function to return the N'th term. We start counting from:
+fib(0) = 0
+fib(1) = 1.
+Examples
+0 -> 0
+6 -> 8
+import java.util.*;
+import org.algohub.engine.type.*;
+
+public class Solution {
+    /**
+     * @param n id of fibonacci term to be returned
+     * @return  N'th term of Fibonacci sequence
+     */
+    public long fib(int n) {
+        // Write your code here
+    }
+}
+
+MEDIUM
