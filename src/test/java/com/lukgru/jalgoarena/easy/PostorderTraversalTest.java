@@ -49,7 +49,7 @@ public class PostorderTraversalTest {
         int[] traversal = inorderTraversal.postorderTraversal(root);
 
         //then
-        int[] expected = {4,2,5,1,6,3,7};
+        int[] expected = {4,5,2,6,7,3,1};
         assertArrayEquals(expected, traversal);
     }
 
@@ -62,7 +62,7 @@ public class PostorderTraversalTest {
         int[] traversal = inorderTraversal.postorderTraversal(root);
 
         //then
-        int[] expected = {4,2,1,3,7};
+        int[] expected = {4,2,7,3,1};
         assertArrayEquals(expected, traversal);
     }
 

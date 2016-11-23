@@ -25,7 +25,7 @@ public class PostorderTraversal {
     private void traverse(TreeNode node, List<Integer> list) {
         if (node == null) return;
         traverse(node.left, list);
-        list.add(node.data);
         traverse(node.right, list);
+        list.add(node.data);
     }
 }
