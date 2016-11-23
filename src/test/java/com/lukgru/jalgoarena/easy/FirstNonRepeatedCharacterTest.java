@@ -32,8 +32,7 @@ public class FirstNonRepeatedCharacterTest {
         String output = firstNonRepeatedCharacter.findFirstNonRepeatedChar(input);
 
         //then
-        String expected = "";
-        assertEquals(expected, output);
+        assertNull(output);
     }
 
     @Test
