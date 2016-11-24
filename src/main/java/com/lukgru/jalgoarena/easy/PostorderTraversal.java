@@ -11,7 +11,7 @@ import java.util.List;
 public class PostorderTraversal {
 
     public int[] postorderTraversal(TreeNode root) {
-        if (root == null) return null;
+        if (root == null) return new int[0];
         if (root.right == null && root.left == null) return new int[]{root.data};
         List<Integer> list = new ArrayList<>(7);
         traverse(root, list);
