@@ -1,279 +1,5 @@
 EASY
 
-
-Single Number  Problem Ranking
-Write a method singleNumber that returns a number that appears only once in an array. Assume that array will surely have a unique value. The array will never be empty..
-Examples
-[1,2,3,4,1,2,3,4,5]
-->
-5
-
-[1,2,3,4,3,-2,4,5,1,2,3,4,5,]
-[0,1,2,3,4,5,1,2,3,4,5,]
-[1,]
-[1,2,3,4,1,2,3,4,5,]
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param arr Array of integers with a single number
-     * @return Single Number to find
-     */
-    public int singleNumber(int[] arr) {
-        if(arr.length == 1) return arr[0];
-        Arrays.sort(arr);
-        for (int i=0 ; i<arr.length-1 ; i=i+2)  {
-            if (arr[i] != arr[i+1]) return arr[i];
-        }
-        return arr[arr.length - 1];
-    }
-}
-
-Postorder Traversal  Problem Ranking
-Given a binary tree, Write a method postorderTraversal to traverse the tree in the postorder manner. Return array of elements visited in postorder format.
-Example
-    1
-   / \
-  2   3     ==> 4526731
- / \ / \
-4  5 6  7 
-
-v:1l:nullr:null
-null
-v:1l:v:2l:v:4l:nullr:nullr:v:5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:7l:nullr:null
-v:1l:v:2l:v:4l:nullr:nullr:nullr:v:3l:nullr:v:7l:nullr:null
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param root Root of binary tree
-     * @return  Postordered array of binary tree elements
-     */
-    public int[] postorderTraversal(TreeNode root) {
-        // Write your code here
-    }
-}
-
-Inorder Traversal  Problem Ranking
-Given a binary tree, Write a method inorderTraversal to traverse the tree in the inorder manner. Return array of elements visited in inorder format.
-Example
-    1
-   / \
-  2   3     ==> 4251637
- / \ / \
-4  5 6  7 
-
-null
-v:1l:nullr:null
-v:1l:v:2l:v:4l:nullr:nullr:v:5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:7l:nullr:null
-v:1l:v:2l:v:4l:nullr:nullr:nullr:v:3l:nullr:v:7l:nullr:null
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param root Root of binary tree
-     * @return  Inordered array of binary tree elements
-     */
-    public int[] inorderTraversal(TreeNode root) {
-        // Write your code here
-    }
-}
-
-Insert Node at Tail  Problem Ranking
-Write a method insertAtTail to insert a node at the end of a singly linked list. Return the head of the modified list.
-Examples
-1->2->3->4->5->6, 7 -> 1->2->3->4->5->6->7
-
-1,2,3,4,5,6, : 7
- : 2
-1, : 1
-5,3, : 5
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param head Linked List head
-     * @param data New value
-     * @return  New linked list
-     */
-    public ListNode insertAtTail(ListNode head, int data) {
-        // Write your code here
-    }
-}
-
-Sum of a binary tree  Problem Ranking
-Given a binary tree, write a method sum to find and return the sum of all elements. For an empty tree return 0.
-Example
-    1
-   / \
-  2   3     ==> sum = 28
- / \ / \
-4  5 6  7 
-
-v:1l:v:2l:v:4l:nullr:nullr:v:-5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:-7l:nullr:null
-null
-v:1l:nullr:null
-v:1l:v:2l:v:4l:nullr:nullr:v:5l:nullr:nullr:v:3l:v:6l:nullr:nullr:v:7l:nullr:null
-v:1l:v:2l:v:4l:nullr:nullr:nullr:v:3l:nullr:v:7l:v:6l:nullr:nullr:null
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param root Root of binary tree
-     * @return  Sum of all binary tree elements
-     */
-    public int sum(TreeNode root) {
-        // Write your code here
-    }
-}
-
-Delete List Head Node  Problem Ranking
-Given a singly linked list, write a method deleteAtHead to delete its head node and return the new head.
-Examples
-1->2->3->4->5->6 -> 2->3->4->5->6
-
-1,
-1,2,3,4,5,6,
-
-5,3,
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param head Linked List head
-     * @return  Initial linked list with removed head
-     */
-    public ListNode deleteAtHead(ListNode head) {
-        // Write your code here
-    }
-}
-
-First Non Repeated Character  Problem Ranking
-Write a method findFirstNonRepeatedChar that finds the first non-duplicate character in a string. Return null if no unique character is found.
-Example
-'asdsdakz -> 'k'
-
-asdsdakz
-null
-asdsda
-
-asd
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param str Input string
-     * @return  First non-duplicate character or null if absent
-     */
-    public String findFirstNonRepeatedChar(String str) {
-        // Write your code here
-    }
-}
-
-Remove Duplicates  Problem Ranking
-Write method removeDuplicates to remove duplicates from an unsorted linked list.
-Examples
-1->2->3->4->3->3 -> 1->2->3->4
-
-1,1,1,1,
-1,2,3,4,3,3,
-1,1,1,1,2,3,4,3,3,
-1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,1,2,3,4,3,3,
-1,1,2,2,3,3,4,4,3,3,
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param node Linked List where we need to remove duplicates
-     * @return  Linked List with removed duplicates
-     */
-    public ListNode removeDuplicates(ListNode node) {
-        // Write your code here
-    }
-}
-
-Sort Array  Problem Ranking
-Write method sort to sorg given array.
-Note: You cannot use Arrays.sort or any other framework method to do that - you have to implement it.
-Example
-[44,2,22,7,11,15] -> [2,7,11,15,22,44]
-
-[44,2,22,7,11,15,]
-[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,9,9,9,10,11,1001,2001,198,201,203,201,999,345,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,4,5,6,1,1,1,1,1,1,1,1,1,1,1,101,1,1,1,1,1,1,1,1,]
-[1,]
-null
-[]
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param arr An array to sort
-     * @return  Sorted array
-     */
-    public int[] sort(int[] arr) {
-        // Write your code here
-    }
-}
-
-Insert Stars  Problem Ranking
-Given a string, write a method insertPairStar to compute a new string where the identical adjacent characters in the original string are separated by a "*".
-Example
-'sas -> 'sas'
-'kk -> 'k*k'
-
-asdsdakz
-null
-kk
-
-kkcckkcc
-aaaaa
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param str Input string
-     * @return  Computed string
-     */
-    public String insertPairStar(String str) {
-        // Write your code here
-    }
-}
-
-Transpose Matrix  Problem Ranking
-You are given a square 2D image matrix where each integer represents a pixel. Write a method transposeMatrix to transform the matrix into its transpose - in-place. The transpose of a matrix is a matrix which is formed by turning all the rows of the source matrix into columns and vice-versa..
-Examples
-[[1, 2, 3, 4],
- [5, 6, 7, 8],
- [9, 0, 1, 2],
- [3, 4, 5, 0]]
-->
-[[1, 5, 9, 3],
- [2, 6, 0, 4],
- [3, 7, 1, 5],
- [4, 8, 2, 0]]
- import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param matrix Matrix to transpose
-     * @return  Operation in place
-     */
-    public void transposeMatrix(int[][] matrix) {
-        // Write your code here
-    }
-}
-
 Count the Leaves  Problem Ranking
 Write a method countLeaves to find the total number of leaf nodes in a binary tree. If there is no leaf nodes, return 0..
 Example
@@ -283,7 +9,7 @@ Example
  / \ / \
 4  5 6  7 
 import java.util.*;
-import org.algohub.engine.type.*;
+import com.jalgoarena.type.*;
 
 public class Solution {
     /**
@@ -295,12 +21,48 @@ public class Solution {
     }
 }
 
+Single Number  Problem Ranking
+Write a method singleNumber that returns a number that appears only once in an array. Assume that array will surely have a unique value. The array will never be empty..
+Examples
+[1,2,3,4,1,2,3,4,5]
+->
+5
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param arr Array of integers with a single number
+     * @return Single Number to find
+     */
+    public int singleNumber(int[] arr) {
+        // Write your code here
+    }
+}
+
+Remove Duplicates  Problem Ranking
+Write method removeDuplicates to remove duplicates from an unsorted linked list.
+Examples
+1->2->3->4->3->3 -> 1->2->3->4
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param node Linked List where we need to remove duplicates
+     * @return  Linked List with removed duplicates
+     */
+    public ListNode removeDuplicates(ListNode node) {
+        // Write your code here
+    }
+}
+
 Palindrome List  Problem Ranking
 Implement method isPalindrome with algorithm to check if a linked list is a palindrome.
 Examples
 0->1->2->1->0 -> true
 import java.util.*;
-import org.algohub.engine.type.*;
+import com.jalgoarena.type.*;
 
 public class Solution {
     /**
@@ -312,143 +74,12 @@ public class Solution {
     }
 }
 
-Check Permutations  Problem Ranking
-Given two strings, write a method permutation to decide if one is a permutation of other.
-Examples
-"abc", "cba" -> true
-"abc", "cb" -> false
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param str1 first string to be checked for permutation match
-     * @param str2 second string to be checked for permutation match
-     * @return  Indicate if one string is a permutation of another
-     */
-    public boolean permutation(String str1, String str2) {
-        // Write your code here
-    }
-}
-
-Is String Unique  Problem Ranking
-Implement method isUniqueChars with an algorithm to determine if a ASCII string has all unique characters.
-What if you cannot use additional data structures?
-Examples
-"AdSda" -> false
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param str input string to be checked (ASCII)
-     * @return  Indicate if string contains only unique chars
-     */
-    public boolean isUniqueChars(String str) {
-        // Write your code here
-    }
-}
-
-Binary Search  Problem Ranking
-Write a method binarySearch that searches an array of integers for a given integer using the Binary Search Algorithm. If the input integer is found in the array - return index of that item. Otherwise, return -1.
-Note: You may assume that the given array of integers is already sorted in ascending order.
-Example
-[2,5,7,11,15], 11 -> 3
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param arr An array of Integers
-     * @param n element to find
-     * @return  Index of element if found or -1 if absent
-     */
-    public int binarySearch(int[] arr, int n) {
-        // Write your code here
-    }
-}
-
-Delete Node at Middle  Problem Ranking
-Given a singly linked list, write a method deleteAtMiddle to delete the node at a given position (starting from 1 as the head position) and return the head of the list. Do nothing if the input position is out of range.
-Examples
-1->2->3->4->5->6, 3 -> 1->2->4->5->6
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param head Linked List head
-     * @param position Position of node to be removed
-     * @return  New Linked List with removed node at given position
-     */
-    public ListNode deleteAtMiddle(ListNode head, int position) {
-        // Write your code here
-    }
-}
-
-Height of a binary tree  Problem Ranking
-Given a binary tree, Write a method findHeight to find its height. An empty tree has a height of 0.
-Example
-    1
-   / \
-  2   3     ==> height = 3
- / \ / \
-4  5 6  7 
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param root Root of binary tree
-     * @return  Height of binary tree
-     */
-    public int findHeight(TreeNode root) {
-        // Write your code here
-    }
-}
-
-Binary Representation  Problem Ranking
-Write a method computeBinary to compute the binary representation of an integer. The method should return a string with 1s and 0s. Use the minimum number of binary digits needed for representation (truncate unnecessary trailing 0s).
-Note: using java framework to solve it is forbidden - you have to code it by yourself.
-Example
-6 -> '110'
-5 -> '101'
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param val Input number
-     * @return  Binary representation
-     */
-    public String computeBinary(int val) {
-        // Write your code here
-    }
-}
-
-Find Middle Node  Problem Ranking
-Given a singly linked list, write a method findMiddleNode to find and return the middle node of the list.
-Examples
-1->2->3->4->5 -> 3->4->5
-import java.util.*;
-import org.algohub.engine.type.*;
-
-public class Solution {
-    /**
-     * @param head Linked List head
-     * @return  Middle node
-     */
-    public ListNode findMiddleNode(ListNode head) {
-        // Write your code here
-    }
-}
-
 Delete List Tail Node  Problem Ranking
 Given a singly linked list, write a method deleteAtTail to delete its last node and return the head.
 Examples
 1->2->3->4->5->6 -> 1->2->3->4->5
 import java.util.*;
-import org.algohub.engine.type.*;
+import com.jalgoarena.type.*;
 
 public class Solution {
     /**
@@ -471,7 +102,7 @@ Example
  
 output ==> 30
 import java.util.*;
-import org.algohub.engine.type.*;
+import com.jalgoarena.type.*;
 
 public class Solution {
     /**
@@ -488,7 +119,7 @@ Given two strings, s1 and s2, write method isRotation with algorithm checking if
 Example
 'watterbottle', 'erbottlewatt' -> true
 import java.util.*;
-import org.algohub.engine.type.*;
+import com.jalgoarena.type.*;
 
 public class Solution {
     /**
@@ -501,24 +132,950 @@ public class Solution {
     }
 }
 
-Fibonacci  Problem Ranking
-Write the fib function to return the N'th term. We start counting from:
-fib(0) = 0
-fib(1) = 1.
-Examples
-0 -> 0
-6 -> 8
+Preorder Traversal  Problem Ranking
+Given a binary tree, Write a method preorderTraversal to traverse the tree in the preorder manner. Return array of elements visited in preorder format.
+Example
+    1
+   / \
+  2   3     ==> 1245367
+ / \ / \
+4  5 6  7
 import java.util.*;
-import org.algohub.engine.type.*;
+import com.jalgoarena.type.*;
 
 public class Solution {
     /**
-     * @param n id of fibonacci term to be returned
-     * @return  N'th term of Fibonacci sequence
+     * @param root Root of binary tree
+     * @return  Preordered array of binary tree elements
      */
-    public long fib(int n) {
+    public int[] preorderTraversal(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Sum of a binary tree  Problem Ranking
+Given a binary tree, write a method sum to find and return the sum of all elements. For an empty tree return 0.
+Example
+    1
+   / \
+  2   3     ==> sum = 28
+ / \ / \
+4  5 6  7
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return  Sum of all binary tree elements
+     */
+    public int sum(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Postorder Traversal  Problem Ranking
+Given a binary tree, Write a method postorderTraversal to traverse the tree in the postorder manner. Return array of elements visited in postorder format.
+Example
+    1
+   / \
+  2   3     ==> 4526731
+ / \ / \
+4  5 6  7
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return  Postordered array of binary tree elements
+     */
+    public int[] postorderTraversal(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Is String Unique  Problem Ranking
+Implement method isUniqueChars with an algorithm to determine if a ASCII string has all unique characters.
+What if you cannot use additional data structures?
+Examples
+"AdSda" -> false
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param str input string to be checked (ASCII)
+     * @return  Indicate if string contains only unique chars
+     */
+    public boolean isUniqueChars(String str) {
+        // Write your code here
+    }
+}
+
+Transpose Matrix  Problem Ranking
+You are given a square 2D image matrix where each integer represents a pixel. Write a method transposeMatrix to transform the matrix into its transpose - in-place. The transpose of a matrix is a matrix which is formed by turning all the rows of the source matrix into columns and vice-versa..
+Examples
+[[1, 2, 3, 4],
+ [5, 6, 7, 8],
+ [9, 0, 1, 2],
+ [3, 4, 5, 0]]
+->
+[[1, 5, 9, 3],
+ [2, 6, 0, 4],
+ [3, 7, 1, 5],
+ [4, 8, 2, 0]]
+ import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param matrix Matrix to transpose
+     * @return  Operation in place
+     */
+    public void transposeMatrix(int[][] matrix) {
+        // Write your code here
+    }
+}
+
+Inorder Traversal  Problem Ranking
+Given a binary tree, Write a method inorderTraversal to traverse the tree in the inorder manner. Return array of elements visited in inorder format.
+Example
+    1
+   / \
+  2   3     ==> 4251637
+ / \ / \
+4  5 6  7 
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return  Inordered array of binary tree elements
+     */
+    public int[] inorderTraversal(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Height of a Binary Tree  Problem Ranking
+Given a binary tree, write a method findHeight to find its height. An empty tree has a height of 0.
+Example
+    1
+   / \
+  2   3     ==> height = 3
+ / \ / \
+4  5 6  7
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return  Height of binary tree
+     */
+    public int findHeight(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Insert Stars  Problem Ranking
+Given a string, write a method insertPairStar to compute a new string where the identical adjacent characters in the original string are separated by a "*".
+Example
+'sas -> 'sas'
+'kk -> 'k*k'
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param str Input string
+     * @return  Computed string
+     */
+    public String insertPairStar(String str) {
+        // Write your code here
+    }
+}
+
+Find Middle Node  Problem Ranking
+Given a singly linked list, write a method findMiddleNode to find and return the middle node of the list.
+Examples
+1->2->3->4->5 => 3->4->5
+1->2->3->4->5->6 => 3->4->5->6
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param head Linked List head
+     * @return  Middle node
+     */
+    public ListNode findMiddleNode(ListNode head) {
+        // Write your code here
+    }
+}
+
+Check Permutations  Problem Ranking
+Given two strings, write a method permutation to decide if one is a permutation of other.
+Examples
+"abc", "cba" -> true
+"abc", "cb" -> false
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param str1 first string to be checked for permutation match
+     * @param str2 second string to be checked for permutation match
+     * @return  Indicate if one string is a permutation of another
+     */
+    public boolean permutation(String str1, String str2) {
+        // Write your code here
+    }
+}
+
+Binary Search  Problem Ranking
+Write a method binarySearch that searches an array of integers for a given integer using the Binary Search Algorithm. If the input integer is found in the array - return index of that item. Otherwise, return -1.
+Note: You may assume that the given array of integers is already sorted in ascending order.
+Example
+[2,5,7,11,15], 11 -> 3
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param arr An array of Integers
+     * @param n element to find
+     * @return  Index of element if found or -1 if absent
+     */
+    public int binarySearch(int[] arr, int n) {
+        // Write your code here
+    }
+}
+
+Sort Array  Problem Ranking
+Write method sort to sort given array.
+Note: You cannot use Arrays.sort or any other framework method to do that - you have to implement it.
+Example
+[44,2,22,7,11,15] -> [2,7,11,15,22,44]
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param arr An array to sort
+     * @return  Sorted array
+     */
+    public int[] sort(int[] arr) {
         // Write your code here
     }
 }
 
 MEDIUM
+
+2 Sum  Problem Ranking
+Given an array of integers, find two numbers such that they add up to a specific target number.
+The method twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.
+Note: You may assume that each input would have exactly one solution.
+Example
+[2,7,11,15], 9 -> [1,2]
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param numbers An array of Integer
+     * @param target target = numbers[index1] + numbers[index2]
+     * @return  Indices of the two numbers
+     */
+    public int[] twoSum(int[] numbers, int target) {
+        // Write your code here
+    }
+}
+
+Reverse Linked List  Problem Ranking
+Given a singly linked list, write a method reverseList to reverse the list and return new head.
+Examples
+1->2->3->4->5->6 -> 6->5->4->3->2->1
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param head Linked List head
+     * @return  Reversed linked list
+     */
+    public ListNode reverseList(ListNode head) {
+        // Write your code here
+    }
+}
+
+Sum Lists 2  Problem Ranking
+You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in forward order, such that the 1's digit is at the tail of the list. Write method addLists that adds the two numbers and returns the sum as a linked list.
+Examples
+6->1->7, 2->9->5 -> 9->1->2 (617 + 295 = 912)
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param l1 First Linked List to add
+     * @param l2 Second Linked List to add
+     * @return  linked list node containing result of sum
+     */
+    public ListNode addLists(ListNode l1, ListNode l2) {
+        // Write your code here
+    }
+}
+
+Binary Representation  Problem Ranking
+Write a method computeBinary to compute the binary representation of an integer. The method should return a string with 1s and 0s. Use the minimum number of binary digits needed for representation (truncate unnecessary 0s).
+Note: using java framework to solve it is forbidden - you have to code it by yourself.
+Example
+6 -> '110'
+-5 -> '11111111111111111111111111111011'
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param value Input number
+     * @return  Binary representation
+     */
+    public String computeBinary(int value) {
+        // Write your code here
+    }
+}
+
+Delete Node at Middle  Problem Ranking
+Given a singly linked list, write a method deleteAtMiddle to delete the node at a given position (starting from 1 as the head position) and return the head of the list. Do nothing if the input position is out of range.
+Examples
+1->2->3->4->5->6, 3 -> 1->2->4->5->6
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param head Linked List head
+     * @param position Position of node to be removed
+     * @return  New Linked List with removed node at given position
+     */
+    public ListNode deleteAtMiddle(ListNode head, int position) {
+        // Write your code here
+    }
+}
+
+Sum Lists  Problem Ranking
+You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1's digit is at the head of the list. Write method addLists that adds the two numbers and returns the sum as a linked list.
+Examples
+7->1->6, 5->9->2 -> 2->1->9 (617 + 295 = 912)
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param l1 First Linked List to add
+     * @param l2 Second Linked List to add
+     * @return  linked list node containing result of sum
+     */
+    public ListNode addLists(ListNode l1, ListNode l2) {
+        // Write your code here
+    }
+}
+
+Find Max Sum Level  Problem Ranking
+Given a binary tree, Write a method findMaxSumLevel to return the level that has the maximum sum. In case the tree is empty return -1.
+Example
+0         1
+         / \
+1       2   3     ==>  2
+       / \ / \
+2     4  5 6  7 
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return Level that has the Maximum Sum
+     */
+    public int findMaxSumLevel(TreeNode root) {
+        // Write your code here
+    }
+}
+
+One Away  Problem Ranking
+There are three types of edits that can be performed on strings:
+insert a character
+remove a character
+replace a character.
+Given two strings, write a method oneEditAway to check if they are one edit (or zero edits) away.
+Examples
+"pale", "ple" -> true
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param first first string
+     * @param second second string
+     * @return  Is first string one or zero edits away from the second?
+     */
+    public boolean oneEditAway(String first, String second) {
+        // Write your code here
+    }
+}
+
+String to Integer (stoi)  Problem Ranking
+Implement method stoi to convert a string to an integer.
+Hint: Carefully consider all possible input cases. If you want a challenge.
+Notes:
+It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front
+For incorrect input, return 0
+You cannot use Integer.parseInt or any other Java framework method - you have to implement it by yourself
+Examples
+"1" -> 1
+"abc" -> 0
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param str A string
+     * @return An integer
+     */
+    public int stoi(String str) {
+        // Write your code here
+    }
+}
+
+Zero Matrix  Problem Ranking
+Write a method zeroMatrix with an algorithm such that if an element in a MxN matrix is 0, its entire row and column are set to 0. Matrix should be changed in place.
+Examples
+[[1, 2, 3, 4],
+ [5, 6, 7, 8],
+ [9, 0, 1, 2],
+ [3, 4, 5, 0]]
+->
+[[1, 0, 3, 0],
+ [5, 0, 7, 0],
+ [0, 0, 0, 0],
+ [0, 0, 0, 0]]
+ import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param matrix Matrix to set zeros
+     * @return  Operation in place
+     */
+    public void zeroMatrix(int[][] matrix) {
+        // Write your code here
+    }
+}
+
+Check Balanced Parentheses  Problem Ranking
+Implement method isBalanced to check whether an equation has a balanced number of left and right parentheses and brackets (including (,),[,],{,}).
+Examples
+() [] () -> true
+([)] -> false
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param input input string with parentheses to be checked
+     * @return  Indicate if parentheses are balanced
+     */
+    public boolean isBalanced(String input) {
+        // Write your code here
+    }
+}
+
+Reverse Level Order Traversal  Problem Ranking
+Given a binary tree, Write a method levelorderRev to traverse the tree in the reversed level order manner. Return array of elements visited in reversed level order format.
+Example
+    1
+   / \
+  2   3     ==> 4567231
+ / \ / \
+4  5 6  7 
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return Reverse level ordered array of binary tree elements
+     */
+    public int[] levelorderRev(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Bit Conversion  Problem Ranking
+Given two input integers a and b, write a method bitSwapRequired to determine the number of bits required to be swapped to convert a to b.
+Example
+21, 31 => 2
+21 = 10101
+31 = 11111
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param a first number
+     * @param b second number
+     * @return Number of swaps
+     */
+    public int bitSwapRequired(int a, int b) {
+        // Write your code here
+    }
+}
+
+BST Validation  Problem Ranking
+Given a binary tree, write a method validateBST to determine if it is a Binary Search Tree.
+Example
+    20 
+   /   \ 
+ 15    30 
+/  \ 
+14  18   
+ 
+output ==> true
+
+     20
+    /   \ 
+  30    15 
+ /  \ 
+14  18 
+   
+output ==> false
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @return  Is a binary search tree
+     */
+    public boolean validateBST(TreeNode root) {
+        // Write your code here
+    }
+}
+
+Merge k Sorted Linked Lists  Problem Ranking
+Write a method mergeKLists to merge k Sorted LinkedList.
+Why would you ever want to do that? Well, if you're dealing with a list of over 200 Million Integers that needs to be sorted, an efficient approach might involve splitting up the massive list into k smaller lists, sorting each list in memory and then combining the sorted lists to re-create the original list, albeit sorted.
+Example
+* 1->2->13->20
+* 1->20->35->40
+* 5->6->12->18
+
+=> 1->1->2->5->6->12->13->18->20->20->35->40
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param lists List of Sorted Linked Lists
+     * @return Merged Linked List
+     */
+    public ListNode mergeKLists(ArrayList<ListNode> lists) {
+        // Write your code here
+    }
+}
+
+Reverse a Linked List in Pairs  Problem Ranking
+Given a singly linked list, write a method reverseInPairs to reverse the list in pairs.
+Example
+1->2->3->4 -> 2->1->4->3
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param head Linked List head
+     * @return Reversed list in pairs
+     */
+    public ListNode reverseInPairs(ListNode head) {
+        // Write your code here
+    }
+}
+
+1-800-Problem  Problem Ranking
+Given a String that represents the digits pressed on a classic cell phone keypad - return all possible letter combinations that the numbers could represent in an ArrayList of Strings.
+Check out the keypad mapping below for reference.
+Note:
+You can assume that the input String contains only numbers between 2 and 9
+The combinations should be return in alphabetical order
+Mapping:
+2 -> "abc"
+3 -> "def"
+4 -> "ghi"
+5 -> "jkl"
+6 -> "mno"
+7 -> "pqrs"
+8 -> "tuv"
+9 -> "wxyz"
+Examples
+34 -> [dg, dh, di, eg, eh, ei, fg, fh, fi]
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param digits digits pressed on a classic cell phone keypad
+     * @return Combinations
+     */
+    public ArrayList<String> getStringsFromNums(String digits) {
+        // Write your code here
+    }
+}
+
+Longest Non-Repeating Substring  Problem Ranking
+Given a String input, write a method longestNRSubstringLen to find the length of the longest substring that is made up of non-repeating characters.
+Examples
+"BCEFGHBCFG" -> 6 ("CEFGHB" or "EFGHBC")
+"FFFFF" -> 1 ("F")
+"aaabbbabcde" -> 5
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param input input string
+     * @return Length of longest non-repeating substring
+     */
+    public int longestNRSubstringLen(String input) {
+        // Write your code here
+    }
+}
+
+Make Change  Problem Ranking
+Given an integer array containing the available denominations of coins in descending order, write a method makeChange to compute the number of possible ways of representing a monetary amount in cents. For simplicity, assume that there are an infinite number of coins available for each coin denomination in the array.
+Example
+[25,10,5,1], 10 -> 4
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param coins An available denomination of coins
+     * @param amount Amount of money to change
+     * @return  Number of possibilities
+     */
+    public int makeChange(int[] coins, int amount) {
+        // Write your code here
+    }
+}
+
+Matrix Max Sum Path  Problem Ranking
+You are given an m x n matrix filed with non-negative integers. Write method matrixMaxSum to find the maximum sum along a path from the top-left of the grid to the bottom-right. Return this maximum sum.
+The direction of movement is limited to right and down.
+Examples
+ 1 2 3
+ 4 5 6
+ 7 8 9
+
+=> 1 + 4 + 7 + 8 + 9 = 29
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param matrix Matrix to check
+     * @return Max sum
+     */
+    public int matrixMaxSum(int[][] matrix) {
+        // Write your code here
+    }
+}
+
+Subset Summation  Problem Ranking
+Given an array of integers and a target number, determine if it is possible to choose a group of integers from the array, such that the numbers in the group sum to the given target.
+Example
+[1,2,3,6,5], 10 -> true
+[1,2,3,6,5], 18 -> false
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param numbers An array of numbers
+     * @param target Target sum number
+     * @return Is possible to find sum
+     */
+    public boolean groupSum(int[] numbers, int target) {
+        // Write your code here
+    }
+}
+
+Minimum Triangle Depth  Problem Ranking
+Given a 'triangle' as an ArrayList of ArrayList's of integers, with each list representing a level of the triangle, find the minimum sum achieved by following a top-down path and adding the integer at each level along the path.
+Movement is restricted to adjacent numbers from the top to the bottom.
+Notes:
+you can traverse through adjacent nodes while moving up or down the triangle.
+An adjacent node is defined as a node that is reached by moving down and left or down and right from a level. For example, in the triangle shown below, if you are at the digit 3 in the second row, its adjacent nodes are 5 and 6
+Examples
+[    [1],
+    [2,3],
+   [4,5,6],
+  [7,8,9,10]
+]
+
+=> 14 (1->2->4->7)
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param input input triangle
+     * @return Minimum sum
+     */
+    public int minTriangleDepth(ArrayList<ArrayList<Integer>> input) {
+        // Write your code here
+    }
+}
+
+Distance in a Binary Tree  Problem Ranking
+Given a binary tree and 2 integers that represents the data values of any two TreeNode present in the tree, write a method getNodeDistance that returns distance between the nodes.
+If any of key does not exist in the tree, return -1. The distance between two nodes is defined as the minimum number of edges that must be traversed to travel between the two nodes.
+Example
+    1
+   / \
+  2   3     ==> getNodeDistance(2,7) => 3
+ / \ / \
+4  5 6  7 
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param root Root of binary tree
+     * @param n1 first node data
+     * @param n2 second node data
+     * @return Distance between the nodes
+     */
+    public int getNodeDistance(TreeNode root, int n1, int n2) {
+        // Write your code here
+    }
+}
+
+Range Module - Merging Ranges  Problem Ranking
+A Range Module is a module that tracks ranges of numbers. Range modules are used extensively when designing scalable online game maps with millions of players.
+Your task is to write a method - mergeIntervals that takes in an ArrayList of integer Intervals (aka ranges), and returns an ArrayList of sorted Intervals where all overlapping intervals have been merged.
+Note:
+[1,3] represents an interval that includes 1, 2 and 3.
+Intervals should be sorted based on the value of start
+The words Range and Interval are used interchangeably
+Examples
+[[1,3],[2,5]] => [[1,5]]
+[[3,5],[1,2]] => [[1,2],[3,5]]
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param intervalsList list of Intervals
+     * @return Array with merged ranges
+     */
+    public ArrayList<Interval> mergeIntervals(ArrayList<Interval> intervalsList) {
+        // Write your code here
+    }
+}
+
+Word Similarity - Edit Distance  Problem Ranking
+Edit distance is a classic algorithm that is used in many applications, including Spell Correction, DNA Sequencing and Natural Language Processing. Given two strings a and b, write a method - editDistance that returns the minimum number of operations needed to transform a into b. The following character operations are allowed:
+Replace character
+Insert character
+Delete character
+Examples
+"sale", "sales" => 1
+
+1) Insert "s"
+"sale", "sold" => 2
+
+1) Replace "a" with "o"
+2) Replace "e" with "d"
+"sa", "s" => 1
+
+1) Delete "a"
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param a input string to be transformed
+     * @param b destination string
+     * @return Minimum number of operations
+     */
+    public int editDistance(String a, String b) {
+        // Write your code here
+    }
+}
+
+
+HARD
+
+Longest Palindromic Substring  Problem Ranking
+Given a String, write the method longestPalSubstr that finds and returns the longest substring which is also a Palindrome.
+Try and accomplish this in at most O(n^2) runtime.
+Examples
+"bccb" => "bccb"
+"bccd" => "cc"
+"bccc" => "ccc"
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param str input
+     * @return Longest substring which is also a Palindrome
+     */
+    public String longestPalSubstr(String str) {
+        // Write your code here
+    }
+}
+
+Range Module - Inserting Ranges  Problem Ranking
+A Range Module is a module that tracks ranges of numbers. Range modules are used extensively when designing scalable online game maps with millions of players.
+Your task is to write a method - insertRange that takes in an ArrayList of sorted, non-overlapping integer Interval's (aka ranges) and a new Interval - insert, and returns an ArrayList of sorted Interval's where insert has been added to the ArrayList in the correct spot and the required overlapping ranges have been merged. Target a time complexity of O(n).
+Note:
+[1,3] represents an interval that includes 1, 2 and 3.
+Intervals should be sorted based on the value of start
+The words Range and Interval are used interchangeably
+Examples
+[ [1,3], [7,10] ] & [2,6] -> [ [1,6], [7,10] ]
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param intervalsList sorted, non-overlapping list of Intervals
+     * @param insert interval to insert
+     * @return Array with inserted ranges
+     */
+    public ArrayList<Interval> insertRange(ArrayList<Interval> intervalsList, Interval insert) {
+        // Write your code here
+    }
+}
+
+Largest Square  Problem Ranking
+Given a two dimensional matrix made up of 0's and 1's, write a method largestSquare to find the largest square containing all 1's and return its area.
+The area is simply the sum of all integers enclosed in the square.
+Example
+Input Matrix : 
+             
+  1101     xxxx    11xx
+  1101  => 11xx or 11xx
+  1111     11xx    xxxx
+
+Output  : 4
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param matrix 2D matrix of 0s and 1s
+     * @return Area of the largest square
+     */
+    public int largestSquare(char[][] matrix) {
+        // Write your code here
+    }
+}
+
+Boggle with Paper Dictionary  Problem Ranking
+You're given a 2D Boggle Board which constrains an m x n matrix of chars - char[][] board, and a rudimentary, paper Dictionary in the form of an ArrayList of more than 19,000 words.
+Write a method - boggleByot that searches the Boggle Board for words in the dictionary. Your method should return an alphabetically sorted ArrayList of words that are present on the board as well as in the dictionary.
+Words on the board can be constructed with sequential adjacent letters, where adjacent letters are horizontal or vertical neighbours (not diagonal). Also, each letter on the Boggle Board must be used only once.
+Note:
+Your program should run in a reasonable amount of time - about a few milliseconds for each test case.
+Examples
+Example:
+
+Input Board :      
+{
+    {A, O, L},
+    {D, E, L},
+    {G, H, I},
+}
+Dictionary : Boggle dictionary of more than 19,000 english words
+Output: [HELLO]
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param board Boggle Board
+     * @param dictionary Boggle dictionary of more than 19,000 english words
+     * @return List of words
+     */
+    public ArrayList<String> boggleByot(char[][] board, ArrayList<String> dictionary) {
+        // Write your code here
+    }
+}
+
+Maximum Contiguous Subsequence  Problem Ranking
+Given an array of integers consisting of both positive and negative numbers, write a method maxContSequence to find the contiguous subsequence that has the maximum sum among all subsequences in the array.
+Your method should return res array containing 3 integers in the following format:
+res[0] = max sum
+res[1] = starting index of the subsequence
+res[2] = ending index of the subsequence
+Note
+In mathematics, a subsequence is a sequence that can be derived from another sequence by deleting some elements without changing the order of the remaining elements. For example, the sequence <A,B,D> is a subsequence of <A,B,C,D,E,F>. They should not be confused with substring which is a refinement of subsequence.
+you can check wikipedia for more details
+for empty input, return -1
+Examples
+[-1,-2,3,4,5] -> [12,2,4]
+[1,2,3,-2,5] -> [9,0,4]
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param arr array of integers
+     * @return Result containing 3 integers, max sum, starting and ending index of the subsequence
+     */
+    public int[] maxContSequence(int[] arr) {
+        // Write your code here
+    }
+}
+
+Chocolate Bars  Problem Ranking
+A rectangular chocolate bar is divided into squares by horizontal and vertical grooves, in the usual way. It is to be cut into individual squares. A cut is made by choosing a piece and cutting along one of it grooves. (Thus each cut splits one piece into two pieces). Additionally, your chocolate is already cut into two pieces. Write a method countChocolateCuts with a number answering question - what is the minimal number of cuts needed to completely cut the two parts of chocolate into all its squares?
+Examples
+ [1] 
+ [1][1][1] 
+ [1]
+    &           ==> 9 
+[1][1][1] 
+      [1] 
+[1][1][1]
+
+Explanation: 
+ [1] |   |
+-----|---|---
+ [1] |[1]|[1]   => 4
+-----|---|---
+ [1] |   |
+    &                  ==> 4 + 5 = 9
+[1]|[1]|[1] 
+---|---|----
+       |[1]     => 5
+---|---|----
+[1]|[1]|[1]
+import java.util.*;
+import com.jalgoarena.type.*;
+
+public class Solution {
+    /**
+     * @param chocolateBarPartOne Matrix representing first part of chocolate bar
+     * @param chocolateBarPartTwo Matrix representing second part of chocolate bar
+     * @return  Number of cuts
+     */
+    public int countChocolateCuts(int[][] chocolateBarPartOne, int[][] chocolateBarPartTwo) {
+        // Write your code here
+    }
+}
